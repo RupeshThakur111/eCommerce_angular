@@ -1,0 +1,207 @@
+{
+  "seller": [
+    {
+      "Name": "sada",
+      "Email": "asd",
+      "Password": "asd",
+      "id": 3
+    },
+    {
+      "Name": "abc",
+      "Email": "gggg",
+      "Password": "ggggg",
+      "id": 9
+    },
+    {
+      "Name": "",
+      "Email": "",
+      "Password": "",
+      "id": 10
+    }
+  ],
+  "Product": [
+    {
+      "Name": " Iphone 14pro",
+      "Price": 220000,
+      "Color": "Black",
+      "Category": "Mobile",
+      "Desciption": "Latest specification",
+      "Image": "iphone.jfif",
+      "id": 20
+    },
+    {
+      "Name": "Maserati",
+      "Price": 16000000,
+      "Color": "White",
+      "Category": "Car",
+      "Desciption": "With AI  support",
+      "Image": "car.jpg",
+      "id": 21
+    },
+    {
+      "Name": " Iphone 14pro",
+      "Price": 220000,
+      "Color": "Red",
+      "Category": "Mobile",
+      "Desciption": "Latest specification",
+      "Image": "iphone.jfif",
+      "id": 22
+    },
+    {
+      "Name": "Maserati",
+      "Price": 15000000,
+      "Color": "Silver",
+      "Category": "Car",
+      "Desciption": "With AI  support",
+      "Image": "car.jpg",
+      "id": 23
+    },
+    {
+      "Name": "Tshirt",
+      "Price": 2200,
+      "Color": "Sky blue",
+      "Category": "Clothes",
+      "Desciption": "Cotton fabric",
+      "Image": "tshirt.jpg",
+      "id": 25
+    },
+    {
+      "Name": "Laptop",
+      "Price": 150000,
+      "Color": "Silver",
+      "Category": "Electronic gadgets",
+      "Desciption": "With 16 gb ram",
+      "Image": "laptop.avif",
+      "id": 26
+    },
+    {
+      "Name": "Laptop",
+      "Price": 250000,
+      "Color": "Black",
+      "Category": "Electronic gadgets",
+      "Desciption": "With 16 gb ram",
+      "Image": "laptop.avif",
+      "id": 26
+    },
+    {
+      "Name": "Goggle",
+      "Price": 12000,
+      "Color": "Black",
+      "Category": "Spectacles",
+      "Desciption": "Uv rays protected",
+      "Image": "goggle.jpg",
+      "id": 28
+    },
+    {
+      "Name": "Goggle",
+      "Price": 7000,
+      "Color": "Black",
+      "Category": "Spectacles",
+      "Desciption": "Uv rays protected",
+      "Image": "goggle.jpg",
+      "id": 29
+    },
+    {
+      "Name": "gdfgdf",
+      "Price": 435,
+      "Color": "fdgdfg",
+      "Category": "dfgf",
+      "Desciption": "dfgfdg",
+      "Image": "car.jpg",
+      "id": 30
+    },
+    {
+      "Name": "asdasd",
+      "Price": 2,
+      "Color": "asd",
+      "Category": "asd",
+      "Desciption": "asd",
+      "Image": "iphone.jfif",
+      "id": 31
+    },
+    {
+      "Name": "asd",
+      "Price": 2,
+      "Color": "asd",
+      "Category": "asd",
+      "Desciption": "asd",
+      "Image": "iphone.jfif",
+      "id": 32
+    },
+    {
+      "Name": "ada",
+      "Price": 1,
+      "Color": "asd",
+      "Category": "asd",
+      "Desciption": "asd",
+      "Image": "iphone.jfif",
+      "id": 33
+    },
+    {
+      "Name": "asd",
+      "Price": 2,
+      "Color": "asd",
+      "Category": "asd",
+      "Desciption": "asd",
+      "Image": "iphone.jfif",
+      "id": 34
+    }
+  ],
+  "Users": [
+    {
+      "Name": "aaa",
+      "Email": "aaa",
+      "Password": "aaa",
+      "id": 1
+    },
+    {
+      "Name": "peter",
+      "Email": "peter",
+      "Password": "peter",
+      "id": 2
+    },
+    {
+      "Name": "tony",
+      "Email": "tony",
+      "Password": "tony",
+      "id": 3
+    },
+    {
+      "Name": "abc",
+      "Email": "abc",
+      "Password": "abc",
+      "id": 4
+    },
+    {
+      "Name": "Rupesh ",
+      "Email": "abc@gmail",
+      "Password": "rupesh",
+      "id": 5
+    }
+  ],
+  "Cart": [
+    {
+      "Name": " Iphone 14pro",
+      "Price": 220000,
+      "Color": "Black",
+      "Category": "Mobile",
+      "Desciption": "Latest specification",
+      "Image": "iphone.jfif",
+      "Quantity": 1,
+      "productId": null,
+      "userId": 5,
+      "ProductId": 20,
+      "id": 1
+    }
+  ],
+  "orders": [
+    {
+      "Email": "asd",
+      "Mobile": "asd",
+      "FullAddress": "asd",
+      "totalPrice": 200,
+      "userId": 3,
+      "id": 1
+    }
+  ]
+}

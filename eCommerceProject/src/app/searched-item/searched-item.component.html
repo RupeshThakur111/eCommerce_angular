@@ -1,0 +1,17 @@
+<div class="card2" style="display: flex; flex-wrap: wrap;">
+    <div *ngFor="let item of searchedResult" class="card" style="width: 18rem; margin: 1rem;">
+      <img src="assets/{{item.Image}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <div style="text-align: center;">
+          <hr>
+          <p><b>Price : </b>{{item.Price}}</p> 
+          <p><b>Color : </b>{{item.Color}}</p>
+          <hr>
+        </div>
+        <div style="text-align: center;">
+          <a routerLink="/details/{{item.id}}" class="card-link">View Details</a>
+          <a href="#" class="card-link">Add to Cart</a>
+        </div>
+      </div>
+    </div>
+  </div>

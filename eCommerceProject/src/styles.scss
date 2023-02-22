@@ -1,0 +1,47 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+
+.footer {
+    background-color: #f7f7f7;
+    padding: 10px;
+    width: 100%;
+   // height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer .footer-title {
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.footer .social-links li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.footer .social-links li a {
+    color: #333;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.footer .copyright {
+    text-align: center;
+    margin-top: 20px;
+}

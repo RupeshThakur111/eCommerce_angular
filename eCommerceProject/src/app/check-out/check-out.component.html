@@ -1,0 +1,44 @@
+<div class="ckeckout">
+    <h1>CheckOut</h1>
+    <p>{{Message}}</p>
+    <p style="color:red">{{formValidMeassage}}</p>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="formClass">
+                <h3>Shipping Address</h3>
+                <form [formGroup]="userDetails">
+                    <div class="form-group mb-3">
+                        <div class="input-field"> 
+                            <input type="text" class="form-control" placeholder="Enter Email" formControlName="Email" [ngClass]="{'is-invalid': (userDetails.get('Email')?.touched || userDetails.get('Email')?.dirty) && !userDetails.get('Email')?.valid}">
+                        </div>
+                        <span *ngIf=" userDetails.controls['Email'].touched && userDetails.hasError('required' , 'Email')" class="text-danger"> 
+                            *Email is required
+                        </span>
+                    </div>
+                    <div class="form-group mb-3">
+                        <div class="input-field"> 
+                            <input type="text" class="form-control" placeholder="Enter Mobile" formControlName="Mobile" [ngClass]="{'is-invalid': (userDetails.get('Mobile')?.touched || userDetails.get('Mobile')?.dirty) && !userDetails.get('Mobile')?.valid}">
+                        </div>
+                        <span *ngIf=" userDetails.controls['Mobile'].touched && userDetails.hasError('required' , 'Mobile')" class="text-danger"> 
+                            *Mobile is required
+                        </span>
+                    </div>
+                    <div class="form-group mb-3">
+                        <div class="input-field"> 
+                            <input type="text" class="form-control" placeholder="Enter FullAddress" formControlName="FullAddress" [ngClass]="{'is-invalid': (userDetails.get('FullAddress')?.touched || userDetails.get('FullAddress')?.dirty) && !userDetails.get('FullAddress')?.valid}">
+                        </div>
+                        <span *ngIf=" userDetails.controls['FullAddress'].touched && userDetails.hasError('required' , 'FullAddress')" class="text-danger"> 
+                            *FullAddress is required
+                        </span>
+                    </div>
+                    <button type="submit" class="btn btn-secondary" (click)="orderNow(userDetails.value)">Order Now</button>
+                    
+                </form>
+            </div>
+        </div>
+        <div class="col-sm-5 details">
+          <h3>Total Amount :  {{totalPrice}} </h3>
+          <h3>Payment Method :</h3>
+        </div>
+    </div>
+</div>

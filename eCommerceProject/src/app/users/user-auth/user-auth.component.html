@@ -1,0 +1,78 @@
+<div *ngIf="!showLogin">
+    <h2>User Sign Up</h2>
+    <p>{{formValidMeassage}}</p>
+<div class="container">
+    <div class="row mb-5">
+        <div class="formClass">
+            <form [formGroup]="SignUpForm">
+                <div class="form-group mb-3">
+                    <div class="input-field"> 
+                        <input type="text" class="form-control" placeholder="Enter Name" formControlName="Name" [ngClass]="{'is-invalid': (SignUpForm.get('Name')?.touched || SignUpForm.get('Name')?.dirty) && !SignUpForm.get('Name')?.valid}">
+                    </div>
+                    <span *ngIf=" SignUpForm.controls['Name'].touched && SignUpForm.hasError('required' , 'Name')" class="text-danger"> 
+                        *Name is required
+                    </span>
+                </div>
+                <div class="form-group mb-3">
+                    <div class="input-field"> 
+                        <input type="text" class="form-control" placeholder="Enter Email" formControlName="Email" [ngClass]="{'is-invalid': (SignUpForm.get('Email')?.touched || SignUpForm.get('Email')?.dirty) && !SignUpForm.get('Email')?.valid}">
+                    </div>
+                    <span *ngIf=" SignUpForm.controls['Email'].touched && SignUpForm.hasError('required' , 'Email')" class="text-danger"> 
+                        *Email is required
+                    </span>
+                </div>
+                <div class="form-group mb-3">
+                    <div class="input-field"> 
+                        <input type="password" class="form-control" placeholder="Enter password" formControlName="Password" [ngClass]="{'is-invalid': (SignUpForm.get('Password')?.touched || SignUpForm.get('Password')?.dirty) && !SignUpForm.get('Password')?.valid}">
+                    </div>
+                    <span *ngIf=" SignUpForm.controls['Password'].touched && SignUpForm.hasError('required' , 'Password')" class="text-danger"> 
+                        *Password is required
+                    </span>
+                </div>
+                <button type="submit" class="btn btn-secondary" (click)="signUp()">Sign Up</button>
+                <span class="account">
+                    already have an account ?? <a (click)="openLogin()" style="cursor: pointer; color:blue;"> Log In</a>
+                </span>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<div *ngIf="showLogin">
+    <h2>User Log In</h2>
+    <p>{{formValidMeassage}}</p>
+<div class="container mb-5">
+    <div class="row">
+        <div class="formClass">
+            <form [formGroup]="sellerLoginForm">
+
+                <div class="errMssg">
+                    {{authError}}
+                </div>
+                <div class="form-group mb-3">
+                    <div class="input-field"> 
+                        <input type="text" class="form-control" placeholder="Enter Email" formControlName="Email" [ngClass]="{'is-invalid': (sellerLoginForm.get('Email')?.touched || sellerLoginForm.get('Email')?.dirty) && !sellerLoginForm.get('Email')?.valid}">
+                    </div>
+                    <span *ngIf=" sellerLoginForm.controls['Email'].touched && sellerLoginForm.hasError('required' , 'Email')" class="text-danger"> 
+                        *Email is required
+                    </span>
+                </div>
+                <div class="form-group mb-3">
+                    <div class="input-field"> 
+                        <input type="password" class="form-control" placeholder="Enter password" formControlName="Password" [ngClass]="{'is-invalid': (sellerLoginForm.get('Password')?.touched || sellerLoginForm.get('Password')?.dirty) && !sellerLoginForm.get('Password')?.valid}">
+                    </div>
+                    <span *ngIf=" sellerLoginForm.controls['Password'].touched && sellerLoginForm.hasError('required' , 'Password')" class="text-danger"> 
+                        *Password is required
+                    </span>
+                </div>
+                <button type="submit" class="btn btn-secondary" (click)="logIn()">Login</button>
+                <span class="account">
+                    doesn't have an account ?? <a (click)="openSignUp()" style="cursor: pointer; color: blue;"> Sign Up</a>
+                </span>
+            </form>
+        </div>
+    </div>
+</div>
+</div>

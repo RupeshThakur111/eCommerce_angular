@@ -1,0 +1,28 @@
+h2{
+    text-align: center;
+    margin: 100px;
+}
+
+.formClass{
+   width: 700px;
+   position: relative;
+   right: -300px;
+}
+
+button{
+    margin-top: 50px;
+    margin-bottom: none;
+   position: relative;
+   left: -0px;
+   width: 675px;
+}
+.account{
+    display: flex;
+    justify-content: center;
+}
+.errMssg{
+    text-align: center;
+    color: red;
+    background-color:blanchedalmond;
+    margin-bottom: 40px;
+}

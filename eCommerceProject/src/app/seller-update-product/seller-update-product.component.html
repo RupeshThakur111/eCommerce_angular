@@ -1,0 +1,59 @@
+<h2>Update Product</h2>
+<div class="container">
+    <div *ngIf="idFromUrl == 0">
+        <p>{{messageAfterUpdated}}</p>
+    </div>
+    <p>{{messageAfterUpdated}}</p>
+    <div class="row">
+        <div class="formClass">
+            <form [formGroup]="AddProductForm">
+                <div class="form-group mb-3">
+                    <div class="input-field"> 
+                        <input type="text" class="form-control" placeholder="Enter Name" formControlName="Name" [ngClass]="{'is-invalid': (AddProductForm.get('Name')?.touched || AddProductForm.get('Name')?.dirty) && !AddProductForm.get('Name')?.valid}">
+                    </div>
+                    <span *ngIf=" AddProductForm.controls['Name'].touched && AddProductForm.hasError('required' , 'Name')" class="text-danger"> 
+                        *Product Name is required
+                    </span>
+                </div>
+                <div class="form-group mb-3">
+                    <div class="input-field"> 
+                        <input type="number" class="form-control" placeholder="Enter Price" formControlName="Price" [ngClass]="{'is-invalid': (AddProductForm.get('Price')?.touched || AddProductForm.get('Price')?.dirty) && !AddProductForm.get('Price')?.valid}">
+                    </div>
+                    <span *ngIf=" AddProductForm.controls['Price'].touched && AddProductForm.hasError('required' , 'Price')" class="text-danger"> 
+                        *Price is required
+                    </span>
+                </div>
+                <div class="form-group mb-3">
+                    <div class="input-field"> 
+                        <input type="text" class="form-control" placeholder="Enter Color" formControlName="Color" [ngClass]="{'is-invalid': (AddProductForm.get('Color')?.touched || AddProductForm.get('Color')?.dirty) && !AddProductForm.get('Color')?.valid}">
+                    </div>
+                    <span *ngIf=" AddProductForm.controls['Color'].touched && AddProductForm.hasError('required' , 'Color')" class="text-danger"> 
+                        *Color is required
+                    </span>
+                </div>
+                <div class="form-group mb-3">
+                    <div class="input-field"> 
+                        <input type="text" class="form-control" placeholder="Enter Category" formControlName="Category" [ngClass]="{'is-invalid': (AddProductForm.get('Category')?.touched || AddProductForm.get('Category')?.dirty) && !AddProductForm.get('Category')?.valid}">
+                    </div>
+                    <span *ngIf=" AddProductForm.controls['Category'].touched && AddProductForm.hasError('required' , 'Category')" class="text-danger"> 
+                        *Category is required
+                    </span>
+                </div>
+                <div class="form-group mb-3">
+                    <div class="input-field"> 
+                        <input type="text" class="form-control" placeholder="Enter Desciption" formControlName="Desciption" [ngClass]="{'is-invalid': (AddProductForm.get('Desciption')?.touched || AddProductForm.get('Desciption')?.dirty) && !AddProductForm.get('Desciption')?.valid}">
+                    </div>
+                    <span *ngIf=" AddProductForm.controls['Desciption'].touched && AddProductForm.hasError('required' , 'Desciption')" class="text-danger"> 
+                        *Desciption is required
+                    </span>
+                </div>
+                <div class="form-group mb-3">
+                    <div class="input-field"> 
+                        <input type="file" class="form-control" placeholder=" Image" formControlName="Image">
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary" (click)="UpdateProduct(AddProductForm.value)">Update</button>
+            </form>
+        </div>
+    </div>
+</div>

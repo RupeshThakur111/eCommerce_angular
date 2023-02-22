@@ -1,0 +1,31 @@
+<h2>All Product List</h2>
+<p>{{deletedMssg}}</p>
+<div class="table-responsive">
+    <table class="table table">
+        <thead>
+            <tr>
+                <th scope="col">Image</th>
+                <th scope="col">Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Color</th>
+                <th scope="col">Category</th>
+                <th scope="col">Description</th>
+                <th scope="col">Action</th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of productList">
+                <td><img src="assets/{{item.Image}}" alt=""></td>
+                <td>{{item.Name}}</td>
+                <td>{{item.Price}}</td>
+                <td>{{item.Color}}</td>
+                <td>{{item.Category}}</td>
+                <td>{{item.Desciption}}</td>
+                <td><button (click)="deleteProduct(item.id)"> <fa-icon [icon]="icon"></fa-icon></button></td>
+                <td><button routerLink="/sellerUpdateProduct/{{item.id}}"><fa-icon [icon]="icon2"></fa-icon></button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

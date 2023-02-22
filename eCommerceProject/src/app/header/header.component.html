@@ -1,0 +1,81 @@
+<nav class="navbar navbar-expand-lg ml-5 navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="/">Shoppers</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div [ngSwitch]="headerType">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0" *ngSwitchCase="'default'">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" routerLink="/seller">Seller</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" routerLink="/userAuth">Login/SignUp</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Cart({{cartItemsNumber}})</a>
+          </li>
+        </ul>
+      <div class="sellerNav">
+        <ul class="navbar-nav sellerNavbar me-auto mb-2 mb-lg-0" *ngSwitchCase="'seller'">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/sellerHome">Product List</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" routerLink="/sellerAddProduct">Add Product</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" (click)="sellerLogout()">Logout</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">{{sellerName | titlecase}}</a>
+          </li>
+        </ul>
+      </div>
+
+       <div class="userNav">
+        <ul class="navbar-nav sellerNavbar me-auto mb-2 mb-lg-0" *ngSwitchCase="'user'">
+          <li class="nav-item">
+            <a class="nav-link active" >{{userName | titlecase}}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" [routerLink]="cartItemsNumber>0?'cartPage':null">Cart({{cartItemsNumber}})</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a id="logout" class="nav-link active" routerLink="/myOrders">MyOrders</a>
+          </li>
+          <li class="nav-item">
+            <a id="logout" class="nav-link active" (click)="userLogout()">Logout</a>
+          </li>
+         
+        </ul>
+       </div>
+      </div>
+      
+         <div *ngIf="headerType == 'default' || 'user' " class="serachBar">
+          <form class="d-flex">
+            <input #searchInput class="form-control me-2" (keyup)="searchProduct($event)" (blur)="hideSearch()" type="text" placeholder="Search" aria-label="Search">
+            <button type="submit" class="btn btn-warning" (click)="submitSearch(searchInput.value)">Search...</button>
+            <ul class="suggestedResult" *ngIf="searchResult">
+              <li *ngFor="let item of searchResult">
+               <a (mousedown)="redirectToDetails(item.id)">{{item.Name}}</a>   <!--as there is blur event so we cannot use router link directly.-->
+              </li>
+           </ul>
+
+          </form>
+         </div>
+      </div>
+    
+    </div>
+  </nav>
+
+
+
+  

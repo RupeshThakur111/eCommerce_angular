@@ -1,0 +1,61 @@
+.sellerNavbar{
+    position: relative;
+    left: 800px;
+}
+
+.serachBar{
+    position: relative;
+    left:700px;
+}
+.suggestedResult{
+    position: absolute;
+    display: list-item !important;
+    z-index: 10;
+    background-color: #fff;
+    width: 300px;
+    top:40px;
+    left: 50px;
+    border: 1px solid black;
+}
+.suggestedResult li{
+    border: 1px solid #ddd;
+    padding: 5px;
+    list-style-type: none;
+
+}
+.suggestedResult li a{
+    cursor: pointer;
+    color: blueviolet;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100% !important;
+    margin-top: 20px;
+    padding: 20px 0;
+    background-color: #f5f5f5;
+  }
+
+  ::ng-deep footer.container {
+    width: 100% !important;
+  }
+  
+.navbar{
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+}
+
+#logout {
+  cursor: pointer;
+}
+.userNav{
+  position: relative;
+  right: 200px !important
+}
+.sellerNav{
+  position: relative;
+  right: 100px;
+}

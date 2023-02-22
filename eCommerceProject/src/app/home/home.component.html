@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
+<div class="fullCaraussel">
+  <ngb-carousel *ngIf="popularProducts">
+    <ng-template *ngFor="let item of popularProducts" ngbSlide>
+        <div class="picsum-img-wrapper">
+          <a routerLink="/details/{{item.id}}">
+            <img class="productImage" src="assets/{{item.Image}}" alt="">
+          </a>
+        </div>
+        <div class="carousel-caption caraussel" >
+            <h3>{{item.Name}}</h3>
+            <p>{{item.Desciption}}</p>
+        </div>
+      
+    </ng-template>
+</ngb-carousel>
+</div>
+
+<div class="card2" style="display: flex; flex-wrap: wrap;">
+    <div *ngFor="let item of allProduct" class="card" style="width: 18rem; margin: 1rem;">
+      <img src="assets/{{item.Image}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <div style="text-align: center;">
+          <hr>
+          <p><B>Price : </B>{{item.Price}}</p> 
+          <p><b>Color :</b> {{item.Color}}</p>
+          <hr>
+        </div>
+        <div style="text-align: center;">
+          <a routerLink="/details/{{item.id}}" class="card-link">View Details</a>
+          <a href="#" class="card-link">Add to Cart</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
